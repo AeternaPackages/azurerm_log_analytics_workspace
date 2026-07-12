@@ -1,4 +1,9 @@
 # --- azurerm_log_analytics_workspace ---
+output "log_analytics_workspaces_id" {
+  description = "Map of id values across all log_analytics_workspaces, keyed the same as var.log_analytics_workspaces"
+  value       = module.log_analytics_workspaces.log_analytics_workspaces_id
+}
+
 output "log_analytics_workspaces_allow_resource_only_permissions" {
   description = "Map of allow_resource_only_permissions values across all log_analytics_workspaces, keyed the same as var.log_analytics_workspaces"
   value       = module.log_analytics_workspaces.log_analytics_workspaces_allow_resource_only_permissions
@@ -102,6 +107,11 @@ output "log_analytics_workspaces_workspace_id" {
 }
 
 # --- azurerm_log_analytics_saved_search ---
+output "log_analytics_saved_searches_id" {
+  description = "Map of id values across all log_analytics_saved_searches, keyed the same as var.log_analytics_saved_searches"
+  value       = module.log_analytics_saved_searches.log_analytics_saved_searches_id
+}
+
 output "log_analytics_saved_searches_category" {
   description = "Map of category values across all log_analytics_saved_searches, keyed the same as var.log_analytics_saved_searches"
   value       = module.log_analytics_saved_searches.log_analytics_saved_searches_category
