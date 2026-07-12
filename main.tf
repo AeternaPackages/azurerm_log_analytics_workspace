@@ -5,7 +5,7 @@ locals {
     for k1, v1 in var.log_analytics_workspaces : {
       for k2, v2 in coalesce(v1.log_analytics_saved_searches, {}) :
       "${k1}/${k2}" => merge(v2, {
-        log_analytics_workspace_id = module.log_analytics_workspaces.log_analytics_workspaces["${k1}"].id
+        log_analytics_workspace_id = module.log_analytics_workspaces.log_analytics_workspaces_id["${k1}"]
       })
     }
   ]...)
