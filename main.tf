@@ -12,12 +12,12 @@ locals {
 }
 
 module "log_analytics_workspaces" {
-  source                   = "git::https://github.com/AeternaModules/azurerm_log_analytics_workspace.git?ref=v4.80.0"
+  source                   = "git::https://github.com/AeternaModules/azurerm_log_analytics_workspace.git?ref=v4.81.0"
   log_analytics_workspaces = local.log_analytics_workspaces
 }
 
 module "log_analytics_saved_searches" {
-  source                       = "git::https://github.com/AeternaModules/azurerm_log_analytics_saved_search.git?ref=v4.80.0"
+  source                       = "git::https://github.com/AeternaModules/azurerm_log_analytics_saved_search.git?ref=v4.81.0"
   log_analytics_saved_searches = local.log_analytics_saved_searches
   depends_on                   = [module.log_analytics_workspaces]
 }
