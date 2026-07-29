@@ -34,19 +34,14 @@ output "log_analytics_workspaces_immediate_data_purge_on_30_days_enabled" {
   value       = module.log_analytics_workspaces.log_analytics_workspaces_immediate_data_purge_on_30_days_enabled
 }
 
-output "log_analytics_workspaces_internet_ingestion_enabled" {
-  description = "Map of internet_ingestion_enabled values across all log_analytics_workspaces, keyed the same as var.log_analytics_workspaces"
-  value       = module.log_analytics_workspaces.log_analytics_workspaces_internet_ingestion_enabled
+output "log_analytics_workspaces_internet_ingestion_access_type" {
+  description = "Map of internet_ingestion_access_type values across all log_analytics_workspaces, keyed the same as var.log_analytics_workspaces"
+  value       = module.log_analytics_workspaces.log_analytics_workspaces_internet_ingestion_access_type
 }
 
-output "log_analytics_workspaces_internet_query_enabled" {
-  description = "Map of internet_query_enabled values across all log_analytics_workspaces, keyed the same as var.log_analytics_workspaces"
-  value       = module.log_analytics_workspaces.log_analytics_workspaces_internet_query_enabled
-}
-
-output "log_analytics_workspaces_local_authentication_disabled" {
-  description = "Map of local_authentication_disabled values across all log_analytics_workspaces, keyed the same as var.log_analytics_workspaces"
-  value       = module.log_analytics_workspaces.log_analytics_workspaces_local_authentication_disabled
+output "log_analytics_workspaces_internet_query_access_type" {
+  description = "Map of internet_query_access_type values across all log_analytics_workspaces, keyed the same as var.log_analytics_workspaces"
+  value       = module.log_analytics_workspaces.log_analytics_workspaces_internet_query_access_type
 }
 
 output "log_analytics_workspaces_local_authentication_enabled" {

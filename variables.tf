@@ -11,9 +11,8 @@ Optional:
     - daily_quota_gb
     - data_collection_rule_id
     - immediate_data_purge_on_30_days_enabled
-    - internet_ingestion_enabled
-    - internet_query_enabled
-    - local_authentication_disabled
+    - internet_ingestion_access_type
+    - internet_query_access_type
     - local_authentication_enabled
     - reservation_capacity_in_gb_per_day
     - retention_in_days
@@ -41,9 +40,8 @@ EOT
     daily_quota_gb                          = optional(number)
     data_collection_rule_id                 = optional(string)
     immediate_data_purge_on_30_days_enabled = optional(bool)
-    internet_ingestion_enabled              = optional(bool)
-    internet_query_enabled                  = optional(bool)
-    local_authentication_disabled           = optional(bool)
+    internet_ingestion_access_type          = optional(string)
+    internet_query_access_type              = optional(string)
     local_authentication_enabled            = optional(bool)
     reservation_capacity_in_gb_per_day      = optional(number)
     retention_in_days                       = optional(number)
